@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# design references (third-party screenshots) and local tooling
+/references/
+/Portfolio.webp
+/.claude/

@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Zain Ali, portfolio
 
-## Getting Started
+Personal portfolio of Zain Ali, full stack developer and UI/UX designer in Lahore.
 
-First, run the development server:
+Next.js 16 (App Router, Cache Components) · React 19 · TypeScript · Tailwind CSS v4 · GSAP (ScrollTrigger, SplitText) · Lenis · three.js with React Three Fiber and drei · EmailJS.
+
+## Run
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev -- -p 3100
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`npm run build && npm start` for a production build.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Where things live
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Path | What |
+|---|---|
+| `src/content/site.ts` | Bio facts, socials, services, process steps, stack, journey, reels, EmailJS ids |
+| `src/content/projects.ts` | Every project: copy, stack, links, media paths, labels |
+| `src/components/sections/*` | Home sections in page order |
+| `src/components/works/Theatre.tsx` | The 3D "screening room" (R3F): curved video panels on a ring, glass Z, grid room |
+| `src/gl/aurora.ts` | Raw-WebGL aurora shader used by the hero word and the footer |
+| `src/components/Preloader.tsx` | Construction-line loader (runs once per browser session) |
+| `public/work/<slug>/` | `d-*.jpg` desktop shots, `m-*.jpg` mobile shots, `loop.mp4` / `loop-sm.mp4` clips, `poster.jpg` |
+| `docs/PLAN.md` | Plan and open questions |
+| `references/` | Design references (Unifex shot, alche.studio frames, reel frames) |
 
-## Learn More
+## Media
 
-To learn more about Next.js, take a look at the following resources:
+Screenshots and clips were captured from each live Vercel site with `D:\Tools\portfolio-media\capture.js` (headed Edge, CDP screencast, then ffmpeg into 12 s loops):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+node capture.js <publicWorkDir> <framesDir> <slug...>
+node capture.js --encode <framesDir> <publicWorkDir> <slug...>
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Labels
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Real-brand pitch work carries a "Pitch concept · not affiliated" label (`showRealBrand` and `disclaimer` in `projects.ts`).
