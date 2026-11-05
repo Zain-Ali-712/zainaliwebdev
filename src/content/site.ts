@@ -28,7 +28,7 @@ export const site = {
   builds: ["Websites", "Web apps", "Landing pages", "Dashboards", "Booking flows", "Real-time chat"],
   emailjs: {
     // Same EmailJS service the previous portfolio used (Zain-Ali/src/components/contact/ContactMe.jsx).
-    serviceId: "service_q1ykbmr",
+    serviceId: "service_q2iempp",
     templateId: "template_h7n409j",
     publicKey: "YSam38V3pjQZPvV_x",
   },
