@@ -44,3 +44,6 @@ next-env.d.ts
 /references/
 /Portfolio.webp
 /.claude/
+
+.vercel
+.env*.local
